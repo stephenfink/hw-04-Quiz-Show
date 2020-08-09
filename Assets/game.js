@@ -1,7 +1,8 @@
 //This is the code layout for the game show and what we want.
-
+var questions 
+var score
 //when i click start it will start the quiz and put the timer on a count down
-var start = document.querySelector("#start")
+var start = document.getElementById("#start")
 start.addEventListener("click", gameShow);//game is a current place holder for event to happen after click to start game
 
 // when game starts question one will show on screen where the "This is where questions will be placed"
@@ -28,4 +29,4 @@ function gameShow();{
     //this is using the user input a name to save it for later
 }
 
-// 
+// we will use the localStorage to fill in high score
