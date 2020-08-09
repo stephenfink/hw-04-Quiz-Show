@@ -2,7 +2,7 @@
 
 //when i click start it will start the quiz and put the timer on a count down
 var start = document.querySelector("#start")
-start.addEventListener("click", game);//game is a current place holder for event to happen after click to start game
+start.addEventListener("click", gameShow);//game is a current place holder for event to happen after click to start game
 
 // when game starts question one will show on screen where the "This is where questions will be placed"
 // Answer one, two, three, and four will change text in which user may pick one
@@ -14,3 +14,18 @@ start.addEventListener("click", game);//game is a current place holder for event
 //when timer ends the game will stop, until the start button is click to restart it
 //have a high score list base on local user input, also prompt for name after click event to record a high score
 //this will reflect on the high score col. 
+function gameShow();{
+    var userName =prompt("Please enter a name.")
+    if(userName ==null){
+        alert("You must input a username")
+        console.log(userName)
+    }
+    else{
+        localStorage.getItem(userName)
+        console.log(userName)
+    }
+    
+    //this is using the user input a name to save it for later
+}
+
+// 
