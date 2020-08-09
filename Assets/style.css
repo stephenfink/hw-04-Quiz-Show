@@ -37,3 +37,9 @@ h2{
     background-color: snow;
     border-radius: 4%;
 }
+.userHS{
+    color: springgreen;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+}

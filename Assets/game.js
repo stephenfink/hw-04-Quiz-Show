@@ -16,15 +16,10 @@ start.addEventListener("click", gameStart);//game is a current place holder for 
 //have a high score list base on local user input, also prompt for name after click event to record a high score
 //this will reflect on the high score col. 
 function gameStart();{
-    var userName =prompt("Please enter a name.")
-    if(userName ==null){
-        alert("You must input a username")
-        console.log(userName)
-    }
-    else{
-        localStorage.getItem(userName)
-        console.log(userName)
-    }
+    console.log(start)
+    var userName = prompt("Please enter a name.")
+    
+    
     
     //this is using the user input a name to save it for later
 
@@ -35,8 +30,8 @@ function questions(){
 }
  
 
-function answers{
-    
+function userAnswers(){
+
 }
  
     // the timer and questions need to pace well with each other, 
