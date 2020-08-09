@@ -1,5 +1,5 @@
 .body{
-    background-color: aquamarine;
+    background-color: seashell;
 }
 h2{
     font-weight: bold;
@@ -11,4 +11,29 @@ h2{
     text-align: center;
     padding-bottom: 20px;
     font-family: 'Segoe UI';
+}
+
+.abutton{
+    border-color: tan;
+    border: solid 1px;
+    border-radius: 3%;
+}
+
+.rightanswerB{
+    background-color: green;
+}
+.wronganswerB{
+    background-color: red;
+}
+
+.righttext {
+    color: green;
+    font-weight: bold;
+}
+.wrongtext{
+    color: red;
+}
+.row{
+    background-color: snow;
+    border-radius: 4%;
 }
