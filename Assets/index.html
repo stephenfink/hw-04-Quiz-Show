@@ -1,39 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="script" href="game.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+
+<body class="body">
     <header>
-        <h1>Welcome to Quiz Show</h1>
+        <h1 class="title">Welcome to Quiz Show</h1>
     </header>
     <main>
-        <div>
-        <h2>This is where the questions will be placed</h2>
-            <ul>
-                <li>
-                    answer one<button>Click Me</button>
-                </li>
-                <li> 
-                    answer two<button>Click me</button>
-                </li>
-                <li>
-                    answer three<button>Click me</button>
-                </li>
-                <li>
-                    answer four<button>Click me</button>
-                </li>
-            <aside>
-                <div>
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2">
                     <h2>Time</h2>
-                    <h1 id="timer"></h1>
+                    <h1 id="timer">0</h1>
                 </div>
-            </aside>
-            
-            </ul>
-    </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <h2>This is where the questions will be placed</h2>
+                    <ul>
+                        <li>
+                            Answer one <button>Click Me</button>
+                        </li>
+                        <li>
+                            Answer two <button>Click me</button>
+                        </li>
+                        <li>
+                            Answer three <button>Click me</button>
+                        </li>
+                        <li>
+                            Answer four <button>Click me</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h2>Score</h2>
+                    <h1 id="scoreNum">0</h1>
+                </div>
+            </div>
     </main>
+
 </body>
+
 </html>
