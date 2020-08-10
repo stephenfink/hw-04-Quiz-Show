@@ -24,9 +24,17 @@ function gameStart(){
         localStorage.getItem(userName)
         console.log(startBT)
         console.log(userName)
-    for(time = 0) {
-        return score 
+    //for(time = 0) {
+       // return score 
+
+
+            
         
+        
+    }
+
+    function question(){
+        document.getElementById("question").innerText("Javascript is what kind of language?")
     }
     //things to follow suit after this
     //time number counts down from base time to 0
@@ -36,7 +44,7 @@ function gameStart(){
     //new question will pop up
     //when time reaches 0 the score data and the user name data will be added to high score 
     //this will stay as local storage
-}
+
     
 
     
