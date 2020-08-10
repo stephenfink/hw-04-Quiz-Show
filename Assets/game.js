@@ -88,8 +88,18 @@ function gameStart(){
     }
 
     function question(){
-        document.getElementById("question").innerText("Javascript is what kind of language?")
+       var quest = questions[questionsIndex];
+        questionEl.textContent=(questionsIndex) + '. ' + quest.question
+        choice1.textContent = quest.choice1;
+        choice2.textContent = quest.choice2;
+        choice3.textContent = quest.choice3;
+        choice4.textContent = quest.choice4;
+    };
+
+    function nextQuest(){
+        var
     }
+
     //things to follow suit after this
     //time number counts down from base time to 0
     //new question will pop up when user clicks next 
