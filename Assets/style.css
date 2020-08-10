@@ -43,3 +43,9 @@ h2{
     font-weight: bolder;
     font-size: larger;
 }
+@media screen and (max-width: 500px){
+    body {
+        background-color: springgreen;
+    }
+} 
+
