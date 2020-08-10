@@ -24,7 +24,10 @@ function gameStart(){
         localStorage.getItem(userName)
         console.log(startBT)
         console.log(userName)
-
+    for(time = 0) {
+        return score 
+        
+    }
     //things to follow suit after this
     //time number counts down from base time to 0
     // when person answers question timer stops for user to read the correct answer (5000 as said above) 
@@ -75,6 +78,8 @@ function gameStart(){
     //function userAnswers(){}
  
     // the timer and questions need to pace well with each other, 
+
+    // need loop for questions till timer runs out
 
 
 
