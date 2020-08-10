@@ -47,6 +47,13 @@ var questions = [{
 ]
 var score = 0;
 var userName
+var currentQuestion = 0;
+var questionEl = document.getElementById("question")
+
+var choice1 = document.getElementById("choice1")
+var choice2 = document.getElementById("choice2")
+var choice3 = document.getElementById("choice3")
+var choice4 = document.getElementById("choice4")
 //when i click start it will start the quiz and put the timer on a count down
 
 
