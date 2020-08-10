@@ -49,7 +49,9 @@ var score = 0;
 var userName
 var currentQuestion = 0;
 var questionEl = document.getElementById("question")
-
+var nextQ = document.getElementById("next")
+//it event listener nextQ.addEventListener("click", nextQuestion)
+//it function; function nextQuestion(){ goes from current question to next}
 var choice1 = document.getElementById("choice1")
 var choice2 = document.getElementById("choice2")
 var choice3 = document.getElementById("choice3")
@@ -90,10 +92,7 @@ function gameStart(){
     }
     //things to follow suit after this
     //time number counts down from base time to 0
-    // when person answers question timer stops for user to read the correct answer (5000 as said above) 
-    // this pauses time number from going down for a few seconds
-    //after that time number will count down from current state
-    //new question will pop up
+    //new question will pop up when user clicks next 
     //when time reaches 0 the score data and the user name data will be added to high score 
     //this will stay as local storage
 
