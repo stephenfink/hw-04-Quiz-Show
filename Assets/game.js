@@ -7,10 +7,14 @@ var questionEl = document.getElementById("question")
 var nextQ = document.getElementById("next")
 //it event listener nextQ.addEventListener("click", nextQuestion)
 //it function; function nextQuestion(){ goes from current question to next}
-var choice1 = document.getElementById("choice1")
-var choice2 = document.getElementById("choice2")
-var choice3 = document.getElementById("choice3")
-var choice4 = document.getElementById("choice4")
+var c1 = document.getElementById("choice1")
+var c2 = document.getElementById("choice2")
+var c3 = document.getElementById("choice3")
+var c4 = document.getElementById("choice4")
+var text1 = document.getElementById("textanswer1")
+var text2 = document.getElementById("textanswer2")
+var text3 = document.getElementById("textanswer3")
+var text4 = document.getElementById("textanswer4")
 //when i click start it will start the quiz and put the timer on a count down
 
 
@@ -35,24 +39,20 @@ function gameStart(){
         console.log(userName)
     //for(time = 0) {
        // return score 
-
-
-            
-        
         
     }
 
-    function question(){
+    function questionL(questionsIndex){
        var quest = questions[questionsIndex];
         questionEl.textContent=(questionsIndex) + '. ' + quest.question
-        choice1.textContent = quest.choice1;
-        choice2.textContent = quest.choice2;
-        choice3.textContent = quest.choice3;
-        choice4.textContent = quest.choice4;
+        text1.textContent = quest.choice1;
+        text2.textContent = quest.choice2;
+        text3.textContent = quest.choice3;
+        text4.textContent = quest.choice4;
     };
 
     function nextQuest(){
-        var
+        var 
     }
 
     //things to follow suit after this
