@@ -1,10 +1,13 @@
 //This is the code layout for the game show and what we want.
 
 var score = 0;
-var userName
+var userName 
 var currentQuestion = 0;
 var questionEl = document.getElementById("question")
 var nextQ = document.getElementById("next")
+//this is where the user and high score mix
+var user = localStorage.setItem("userName") 
+var highScore = localStorage.setItem("score")
 
 var startTime = 70;
 var time = startTime
@@ -33,12 +36,9 @@ startBT.addEventListener("click", gameStart)
 // user gets answer correct, it will add one point to score and if user gets question wrong user loses more time
 // bonus have a puase between each question to show user which answer was correct, the time will be puase for five seconds "5000"?
 
-//when timer ends the game will stop, until the start button is click to restart it
-//have a high score list base on local user input, also prompt for name after click event to record a high score
-//this will reflect on the high score col. 
 function gameStart(){
     var userName = prompt("Please enter a name.")
-        localStorage.getItem(userName)
+        localStorage.setItem(userName)
         console.log(startBT)
         console.log(userName)
         questionL();
@@ -67,37 +67,51 @@ function gameStart(){
         var answer = selectedChoice.value;
         if(question[currentQuestion].answer == answer){
             score += 1
+            currentScore = document.getElementById("#scoreNum") 
+            score = currentScore
+            
             
             
         }
         selectedChoice.clicked = false
-        if (!c1 = question[currentQuestion].answer){
-            text1.style.color = "red"
-        }
-        if (c1 = question[currentQuestion].answer = answer){
-            text1.style.color = "green"
-        }
-
-        if (c2= question[currentQuestion].answer = answer){
-            text2.style.color = "green"
-        }
-        if (!c2 = question[currentQuestion].answer){
-            text2.style.color = "red"
-        }
-        if (!c3 = question[currentQuestion].answer = answer){
-            text3.style.color = "red"
-        }
-        if (!c4 = question[currentQuestion].answer = answer){
-            text4.style.color = "red"
-        }
-        
+            if (!c1 = question[currentQuestion].answer) {
+                text1.innerHTML.style.color = "red"
+            }
+            if (!c2 = question[currentQuestion].answer){
+                text2.innerHTML.style.color = "red"
+            }
+            if (!c3 = question[currentQuestion].answer = answer){
+                text3.innerHTML.style.color = "red"
+            }
+            if (!c4 = question[currentQuestion].answer = answer){
+                text4.innerHTML.style.color = "red"
+            }
+            
     }
     setInterval(countingDown, 1200)
     function countingDown(){
         var seconds = Math.floor(time);
-        countDownEl.textContent = seconds --;
+        countDownEl.innerHTML = seconds --;
+        countDownEl
     }
+    localStorage.setItem(score)
 
+// after timer runs to 0 these will be added to the high score
+
+
+//when timer ends the game will stop, until the start button is click to restart it
+//have a high score list base on local user input, also prompt for name after click event to record a high score
+//this will reflect on the high score col. 
+    localStorage.setItem(userName)
+    localStorage.setItem(score)
+    function highScoreChart(){
+        for(var i = 0; i < highScore.score.length; i++){
+            var li = document.createElement("li")
+            li.textContent = userHS.user[i] + ", Score: " + score[i]
+            li.classList.add("listingUsers")
+            list.appendChild(li)
+        }
+    };
 
     //things to follow suit after this
     //time number counts down from base time to 0
