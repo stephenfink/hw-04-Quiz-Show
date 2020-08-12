@@ -37,6 +37,8 @@ function gameStart(){
         localStorage.getItem(userName)
         console.log(startBT)
         console.log(userName)
+        questionL();
+        
     //for(time = 0) {
        // return score 
         
@@ -52,7 +54,38 @@ function gameStart(){
     };
 
     function nextQuest(){
-        var 
+        var selectedChoice = document.querySelector("input[type=button]:clicked");
+        if(!selectedChoice){
+            alert("Must pick a possible answer");
+            return;
+        }
+        var answer = selectedChoice.value;
+        if(question[currentQuestion].answer == answer){
+            score += 1
+            
+            
+        }
+        selectedChoice.clicked = false
+        if (!c1 = question[currentQuestion].answer = answer){
+            text1.style.color = "red"
+        }
+        if (c1 = question[currentQuestion].answer = answer){
+            text1.style.color = "green"
+        }
+
+        if (c2= question[currentQuestion].answer = answer){
+            text2.style.color = "green"
+        }
+        if (!c2 = question[currentQuestion].answer){
+            text2.style.color = "red"
+        }
+        if (!c3 = question[currentQuestion].answer = answer){
+            text3.style.color = "red"
+        }
+        if (!c4 = question[currentQuestion].answer = answer){
+            text4.style.color = "red"
+        }
+        
     }
 
     //things to follow suit after this
