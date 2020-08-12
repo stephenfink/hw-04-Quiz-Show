@@ -5,6 +5,10 @@ var userName
 var currentQuestion = 0;
 var questionEl = document.getElementById("question")
 var nextQ = document.getElementById("next")
+
+var startTime = 70;
+var time = startTime
+var countDownEl = document.getElementById("timer")
 //it event listener nextQ.addEventListener("click", nextQuestion)
 //it function; function nextQuestion(){ goes from current question to next}
 var c1 = document.getElementById("choice1")
@@ -38,6 +42,7 @@ function gameStart(){
         console.log(startBT)
         console.log(userName)
         questionL();
+        countingDown();
         
     //for(time = 0) {
        // return score 
@@ -66,7 +71,7 @@ function gameStart(){
             
         }
         selectedChoice.clicked = false
-        if (!c1 = question[currentQuestion].answer = answer){
+        if (!c1 = question[currentQuestion].answer){
             text1.style.color = "red"
         }
         if (c1 = question[currentQuestion].answer = answer){
@@ -87,6 +92,12 @@ function gameStart(){
         }
         
     }
+    setInterval(countingDown, 1200)
+    function countingDown(){
+        var seconds = Math.floor(time);
+        countDownEl.textContent = seconds --;
+    }
+
 
     //things to follow suit after this
     //time number counts down from base time to 0
