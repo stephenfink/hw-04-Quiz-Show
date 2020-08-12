@@ -41,8 +41,6 @@ function gameStart(){
         localStorage.setItem(userName)
         console.log(startBT)
         console.log(userName)
-        questionL();
-        countingDown();
         
     //for(time = 0) {
        // return score 
@@ -70,23 +68,9 @@ function gameStart(){
             currentScore = document.getElementById("#scoreNum") 
             score = currentScore
             
-            
+        }else{
             
         }
-        selectedChoice.clicked = false
-            if (!c1 = question[currentQuestion].answer) {
-                text1.innerHTML.style.color = "red"
-            }
-            if (!c2 = question[currentQuestion].answer){
-                text2.innerHTML.style.color = "red"
-            }
-            if (!c3 = question[currentQuestion].answer = answer){
-                text3.innerHTML.style.color = "red"
-            }
-            if (!c4 = question[currentQuestion].answer = answer){
-                text4.innerHTML.style.color = "red"
-            }
-            
     }
     setInterval(countingDown, 1200)
     function countingDown(){
