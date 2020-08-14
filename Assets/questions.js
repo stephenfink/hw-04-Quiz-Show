@@ -43,4 +43,4 @@ var questions = [{
     "choice4": "localstorage.getitem()",
     "answer": "3"
 }
-]
+];

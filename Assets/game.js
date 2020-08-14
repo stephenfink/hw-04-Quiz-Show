@@ -3,23 +3,33 @@
 var score = 0;
 var userName 
 var currentQuestion = 0;
-var questionEl = document.getElementById("question")
-var nextQ = document.getElementById("next")
+var questionEl = document.getElementById("question");
+var questionTotal = questions.length
+var score = 0;
 //this is where the user and high score mix
-var startTime = 70; //seconds
 
-var countDownEl = document.getElementById("timer")
+var c1 = document.getElementById("c1")
+var c2 = document.getElementById("c2")
+var c3 = document.getElementById("c3")
+var c4 = document.getElementById("c4")
+var nextButton = document.getElementById("nextButton");
 //it event listener nextQ.addEventListener("click", nextQuestion)
 //it function; function nextQuestion(){ goes from current question to next}
 
 //when i click start it will start the quiz and put the timer on a count down
-
+function questionLC(questionindex){
+  // WHEN I answer a question
+    var q =questions[questionindex];
+    questionEl.innerHTML = (questionindex + 1) + ". " + q.questions;
+    c1.innerHTML = q.choice1;
+    c2.innerHTML = q.choice2;
+    c3.innerHTML = q.choice3;
+    c4.innerHTML = q.choice4;
+}
 //function for start
 //function for end
 //function for rendering
 
-var startBT = document.getElementById("start")
-startBT.addEventListener("click", timerSet)
 //game is a current place holder for event to happen after click to start game
 
 // when game starts question one will show on screen where the "This is where questions will be placed"
@@ -31,19 +41,7 @@ startBT.addEventListener("click", timerSet)
 
 
 // this is for the onclick function of the game
-function timerSet(){
-    timeInterval = setInterval(function(){
-    startTime--;
-    countdownEl.innerHTML(startTime);
-    
-    if(startTime <= 0){
-        startTime = 0 
-        clearInterval(timeInterval);
-    }
-},70000);
-}
 
-timerSet()
     
     console.log(startBT)
     
@@ -52,35 +50,40 @@ timerSet()
     //GIVEN I am taking a code quiz
   //  WHEN I click the start button
       
-       
+
         
         
 
 
 
 
-function nextQuestion(){
-// WHEN I answer a question
-  for(var i = 0; i < questions.length; i++){
-   questionEl = questions.question[i]
-   text1 = questions.choice1[i]
-   text2 = questions.choice2[i]
-   text3 = questions.choice3[i]
-   text4 = questions.choice4[i]
-   
-  }
+
   //  THEN I am presented with another question
-}
 
-function answerS(){
-  var answer = clickedAnswer
+function nextQuest(){
+  var pickedChoice = document.querySelector("input[type=radio]:checked")
+  if(!pickedChoice){
+    alert("Must pick an answer");
+    return;
+  }
+  var answer = pickedChoice.value
   if(questions[currentQuestion].answer == answer){
     score += 1;
   }
-  else if(!questions[currentQuestion].answer == answer){
-    startTime -5
+  pickedChoice.checked = false;
+  currentQuestion++;
+  if (currentQuestion == questionTotal -1){
+    nextButton.textContent ="Done";}
     
+    if(currentQuestion == questionTotal){
+    var userName =prompt("your name")
+    localStorage.getItem(userName)
+    localStorage.getItem(score)
+    return;
   }
+  nextQuest(currentQuestion)
+}
+nextQuest(currentQuestion)
   
     //  WHEN I answer a question incorrectly
    // THEN time is subtracted from the clock
@@ -88,7 +91,7 @@ function answerS(){
    // WHEN all questions are answered or the timer reaches 0
    // THEN the game is over
    
-}
+
 function highScore(){
     // WHEN the game is over
     // THEN I can save my initials and score
@@ -100,7 +103,7 @@ function highScore(){
     document.createElement("<div>").innerText(scoreboard)
 
 }
-
+highScore();
 
    
   
