@@ -56,6 +56,7 @@ function loadNextQuestion(){
     var answer = selectedOption.value;
     if(questions[currentQuestion].answer == answer){
         score += 1;
+        currentQuestion++
         
     }
     selectedOption.checked = false;
@@ -66,7 +67,9 @@ function loadNextQuestion(){
     }
     if (currentQuestion == totQuestions || (timeLeft = 0)){
       var userName= prompt("your name")
-     
+      localStorage.setItem(userName)
+      localStorage.setItem(score)
+      loc
       c1.textContent = "Your Score: " + score;
       c2.textContent = "User Name: " +userName;
         return;
@@ -77,4 +80,3 @@ function loadNextQuestion(){
 
 loadQuestion(currentQuestion);
 
-//for local storage
