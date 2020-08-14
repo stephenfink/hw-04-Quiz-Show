@@ -46,27 +46,9 @@ body{
     background-color: rgba(96, 236, 159, 0.8);
     color: #030303
 }
-.next-btn{
-    border: none;
-    outline: none;
-    background-color: rgba(255, 25, 255, 0.5);
-    width: 100px;
-    height: 35px;
-    border-radius: 20px;
-    cursor: pointer;
-    float: right;
-    margin: 10px;
-}
 
-.next-btn:hover{
-    background-color: #09d82b;
-    color: #ee1f1f;
-}
-.result{
-    height: 100px;
-    text-align: center;
-    font-size: 75px;
-}
+
+
 .choice input:checked .choice{
     background-color: red;
     color: black;
