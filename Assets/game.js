@@ -11,14 +11,7 @@ var startTime = 70; //seconds
 var countDownEl = document.getElementById("timer")
 //it event listener nextQ.addEventListener("click", nextQuestion)
 //it function; function nextQuestion(){ goes from current question to next}
-var c1 = document.getElementById("choice1")
-var c2 = document.getElementById("choice2")
-var c3 = document.getElementById("choice3")
-var c4 = document.getElementById("choice4")
-var text1 = document.getElementById("textanswer1")
-var text2 = document.getElementById("textanswer2")
-var text3 = document.getElementById("textanswer3")
-var text4 = document.getElementById("textanswer4")
+
 //when i click start it will start the quiz and put the timer on a count down
 
 //function for start

@@ -1,47 +1,80 @@
 .body{
-    background-color: seashell;
+    font-family: monospace;
+    background-color: teal;
 }
-h2{
-    font-weight: bold;
-    font-size: large;
-    font-family: Impact;
-    color: slateblue;
+
+.container{
+    height: 440px;
+    width: 1000px;
+    position:absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateX(-40%)translateY(-40%);
+    background: rgba(216, 139, 139, 0.5);
+    padding: 20px;
+    border: 1px solid #038c85;
+    box-shadow: 0 0 8px 3px rgba(238, 241, 21, 0.952);
 }
 .title{
+    padding-top: 17px;
     text-align: center;
-    padding-bottom: 20px;
-    font-family: 'Segoe UI';
+    font-size: 36px;
+    text-transform: uppercase;
+    color:rgba(253, 0, 253, 0.849);
+}
+.question{
+    padding: 20px;
+    font-size: 22px;
+    background-color: #38cf38;
+    border-radius: 20px;
+    margin: 10px 0 10px 0;
+    color: #fdc7c7;
 }
 
-.abutton{
-    border-color: tan;
-    border: solid 1px;
-    border-radius: 3%;
+.choice{
+    width: 470px;
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+    vertical-align: middle;
+    background-color: rgba(37, 255, 255, 0.822);
+    margin: 10px 0 10px 10px;
+    color: #000000;
+    border-radius: 20px;
 }
 
-.rightanswerB{
-    background-color: green;
+.choice:hover{
+    background-color: rgba(96, 236, 159, 0.8);
+    color: #030303
 }
-.wronganswerB{
+.next-btn{
+    border: none;
+    outline: none;
+    background-color: rgba(255, 25, 255, 0.5);
+    width: 100px;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    margin: 10px;
+}
+
+.next-btn:hover{
+    background-color: #09d82b;
+    color: #ee1f1f;
+}
+.result{
+    height: 100px;
+    text-align: center;
+    font-size: 75px;
+}
+.choice input:checked .choice{
     background-color: red;
+    color: black;
 }
-
-.righttext {
-    color: green;
-    font-weight: bold;
-}
-.wrongtext{
-    color: red;
-}
-.row{
-    background-color: snow;
-    border-radius: 4%;
-}
-.userHS{
-    color: springgreen;
-    font-family: sans-serif;
-    font-weight: bolder;
-    font-size: larger;
+.time{
+    color: seashell;
+    font-size: 38px;
+    font-family: fantasy;
 }
 @media screen and (max-width: 500px){
     body {
