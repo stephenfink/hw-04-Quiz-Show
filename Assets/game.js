@@ -31,12 +31,12 @@ function setTime() {
 // functions to give each question to the next question
 
 function questionTwo(){
-    title.textContent = "Event Listener"
-    question.textContent = "What does it do?"
-    ans1.textContent = "Mic input"
-    ans2.textContent = "It can help buttons do things when you click on them"
-    ans3.textContent = "A new type of answering machine"
-    ans4.textContent = "A hearing aid"
+  title.textContent = "Operators"
+  question.textContent = "What is the difference of these two; && and ||"
+  ans1.textContent = "AND and NOT"
+  ans2.textContent = "AND and AND"
+  ans3.textContent = "AND and OR"
+  ans4.textContent = "OR and AND"
 }
 
 function questionThree(){
@@ -57,13 +57,62 @@ function questionFour(){
     ans4.textContent = "var hi"
 
 }
-function questionFive(){
-    title.textContent = "Operators"
-    question.textContent = "What is the difference of these two; && and ||"
-    ans1.textContent = "AND and NOT"
-    ans2.textContent = "AND and AND"
-    ans3.textContent = "AND and OR"
-    ans4.textContent = "OR and AND"
 
-}
 
+// event for the timed quiz and if else statments for reaction of timer
+// event listener that checks the question you are on then the correct answer for that question.
+quizBlock.addEventListener("click", function(event) {
+  event.preventDefault();
+  //question 1 on html page
+  if(currentQuestion === 1){
+      if(event.target.matches("#cho4")) {
+          ansCheck.textContent = "good job!"
+          currentQuestion++
+          questionTwo()
+      }else{
+          ansCheck.textContent = "Sorry it was answer number 4"
+          secondsLeft = secondsLeft - 10
+          currentQuestion++
+          questionTwo()
+      }
+      //question 2-4 on JS
+  }else if(currentQuestion === 2){
+      if(event.target.matches("#cho3")) {
+          ansCheck.textContent = "Correct!"
+          currentQuestion++
+          questionThree()
+      }else{
+          ansCheck.textContent = "Sorry it was answer number 2"
+          secondsLeft = secondsLeft - 10
+          currentQuestion++
+          questionThree()
+      }
+  }else if(currentQuestion === 3){
+      if(event.target.matches("#cho1")) {
+          ansCheck.textContent = "Correct!"
+          currentQuestion++
+          questionFour()
+      }else{
+          ansCheck.textContent = "Sorry the answer was console.log()"
+          secondsLeft = secondsLeft - 10
+          currentQuestion++
+          questionFour()
+      }
+  }else{
+      if(event.target.matches("#cho3")) {
+          ansCheck.textContent = "yay that was right"
+          currentQuestion++
+          clearInterval(timerInterval);
+          alert("YOU DID IT!!!")
+       
+      }else{
+          ansCheck.textContent = "and sorry wrong one"
+          secondsLeft = secondsLeft - 10
+          currentQuestion++
+          clearInterval(timerInterval);
+          alert("Game Over, Try again")
+          
+      }
+  }
+  
+});
