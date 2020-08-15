@@ -68,6 +68,10 @@ body{
     font-size: 38px;
     font-family: fantasy;
 }
+
+.jumbotron{
+    padding-top: 20px;
+}
 @media screen and (max-width: 500px){
     body {
         background-color: springgreen;

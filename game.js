@@ -7,7 +7,7 @@ var ansCheck = document.querySelector("#ansCheck")
 var quizBlock = document.querySelector("#quizBlock")
 var title = document.querySelector("#title")
 var question = document.querySelector("#question")
-var secondsLeft = 120;
+var secondsLeft = 100;
 var currentQuestion = 1
 var timerInterval = 0
 //vars for 
@@ -104,14 +104,16 @@ quizBlock.addEventListener("click", function(event) {
           currentQuestion++
           clearInterval(timerInterval);
           alert("YOU DID IT!!!")
-       
+          localStorage.setItem("result", secondsLeft);
+          window.location.replace("name.html");
       }else{
           ansCheck.textContent = "and sorry wrong one"
           secondsLeft = secondsLeft - 10
           currentQuestion++
           clearInterval(timerInterval);
           alert("Game Over, Try again")
-          
+          localStorage.setItem("result", secondsLeft);
+          window.location.replace("name.html");
       }
   }
   
