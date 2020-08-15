@@ -1,31 +1,35 @@
-var userName = ""
 
-// grabs local storage and element and then sets element equal to storage
+var initials = ""
+
+// User input gives us the score from the quiz
 var score = document.querySelector("#score");
 var result = localStorage.getItem("result");
 score.textContent = result;
 
-// creating the player object to store High scores
-var HighScore = JSON.parse(localStorage.getItem("highScore"))
-if( HighScore === null){
-highScore = {
-    name: [],
+// turning data into an object that we can pull for the scores
+var leaderboard = JSON.parse(localStorage.getItem("leaderboard"))
+if( leaderboard === null){
+leaderboard = {
+    //Turn both initials and score into an array
+    initial: [],
     score: []
 };
 };
-// adding this to highscore page 
+console.log(leaderboard)
+// store the player high score to local storage and display it for later
 var submit = document.querySelector("#submit");
-
+//prevents reset and collects data
 submit.addEventListener("click", function(){
     event.preventDefault();
-    userName = document.querySelector("#hsInitial").value;
+    initials = document.querySelector("#hsInitial").value;
     
-    if(userName === ""){
-        alert("You must fill out a name for a score to pair")
+    if(initials === ""){
+        //this is to ensure we get a user name
+        alert("A name is needed to pair your score")
     }else{
-        leaderboard.initial.push(userName)
+        leaderboard.initial.push(initials)
         leaderboard.score.push(result)
-        localStorage.setItem("highScore", JSON.stringify(leaderboard))
+        localStorage.setItem("leaderboard", JSON.stringify(leaderboard))
         window.location.replace("highScores.html");
     }
 });
