@@ -26,7 +26,7 @@ var questions = [{
     "choice1": "check.errer()",
     "choice2": "error.log()", 
     "choice3": "input.errorcheck()", 
-    "choice4": "console.log()",
+    "choice4": "",
     "answer": "4",
 },{
     "question": "Which one is a string?",

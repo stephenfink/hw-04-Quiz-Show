@@ -1,80 +1,69 @@
-var currentQuestion = 0;
-var score = 0;
-var totQuestions = questions.length;
-var timeInterval = 0
-var timeLeft = 70
-var questionEl = document.getElementById("question")
-var btn1 = document.getElementById("c1");
-var btn2 = document.getElementById("c2");
-var btn3 = document.getElementById("c3");
-var btn4 = document.getElementById("c4");
-var start = document.getElementById("startButton");
-var time = document.getElementById("time");
-var nextButton = document.getElementById("nextButton");
+var timeLeft = document.querySelector("#timeLeft")
+var ans1 = document.querySelector("#cho1")
+var ans2 = document.querySelector("#cho2")
+var ans3 = document.querySelector("#cho3")
+var ans4 = document.querySelector("#cho4")
+var ansCheck = document.querySelector("#ansCheck")
+var quizBlock = document.querySelector("#quizBlock")
+var title = document.querySelector("#title")
+var question = document.querySelector("#question")
+var secondsLeft = 120;
+var currentQuestion = 1
+var timerInterval = 0
+//vars for 
 
-
-
-//GIVEN I am taking a code quiz
-
-//WHEN I click the start button
-// click start buttton
-//THEN a timer starts and I am presented with a question
-  //start button starts timer, and question(0)
-  //timer function
-  //question function
-    // 1 right: 3 wrong
-    //wrong answers is -time
-    //answering right adds to score
-    //answering question moves to next question *6
-    //if user runs out of time 
+// Interval start for the timer
+function setTime() {
+    timerInterval = setInterval(function() {
+      secondsLeft--;
+      timeLeft.textContent = secondsLeft;
   
-start.addEventListener("click",)
+      if(secondsLeft <= 0) {
+          secondsLeft = 0
+          clearInterval(timerInterval);
+      }
+  
+    }, 1000);
+  }
+  
+  setTime()
+  
+// functions to give each question to the next question
 
-
-
- //this is the question rotation functions
-function loadQuestion(questionIndex){
-  var q = questions[questionIndex];
-  questionEl.textContent = (questionIndex ++) + ". " + q.question;
-  c1.textContent = q.choice1;
-  c2.textContent = q.choice2;
-  c3.textContent = q.choice3;
-  c4.textContent = q.choice4;
-};
-
-//start.addEventListener("click", setTime)
-
-
-
-
-
-function setTime(){
-  timeInterval = setInterval(function(){
-    timeLeft--;
-    time.textContent = timeLeft;
-    if(timeLeft <= 0){
-      timeLeft = 0
-      //quiz should be over
-      clearInterval(timeInterval);
-    }
-  },1000);
+function questionTwo(){
+    title.textContent = "Event Listener"
+    question.textContent = "What does it do?"
+    ans1.textContent = "Mic input"
+    ans2.textContent = "It can help buttons do things when you click on them"
+    ans3.textContent = "A new type of answering machine"
+    ans4.textContent = "A hearing aid"
 }
-setTime()
 
+function questionThree(){
+    title.textContent = "Checking for Errors"
+    question.textContent = "How can we tell javascript to track errors?"
+    ans1.textContent = "console.log()"
+    ans2.textContent = "error.log()"
+    ans3.textContent = "input.errorcheck()"
+    ans4.textContent = "check.errer()"
+    }
 
+function questionFour(){
+    title.textContent = "Strings"
+    question.textContent = "Which one is a string?"
+    ans1.textContent = "function hello(world){}"
+    ans2.textContent = "<h1>Hello</h1>"
+    ans3.textContent = "var greetings= 'hello'"
+    ans4.textContent = "var hi"
 
+}
+function questionFive(){
+    title.textContent = "Operators"
+    question.textContent = "What is the difference of these two; && and ||"
+    ans1.textContent = "AND and NOT"
+    ans2.textContent = "AND and AND"
+    ans3.textContent = "AND and OR"
+    ans4.textContent = "OR and AND"
 
-console.log(start)
+}
 
-
-
-
-
-//WHEN I answer a question
-//THEN I am presented with another question
-//WHEN I answer a question incorrectly
-//THEN time is subtracted from the clock
-//WHEN all questions are answered or the timer reaches 0
-//THEN the game is over
-//WHEN the game is over
-//THEN I can save my initials and score
