@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Show</title>
+    <title>Quiz show</title>
     <link rel="stylesheet" href="style.css">
-    
 </head>
-
-<body class="body">
+<body>
     <header>
-        <h1 class="title">Welcome to Quiz Show</h1><button id="startButton" class="start-btn" onclick="setTime()">Start</button>
-    </div id="time" ><h1 id="time"></h1></div>
+        <h1 class="title">Welcome to the Quiz Show</h1>
     </header>
-    <main>
-        <div class="container">
-            <div class="row">
-                <div>
-                    <div id="question" class="question"></div>
-                    <label class="choice"><input type="radio" name="choice" value="1" /><span id="c1"></span></label>
-                    <label class="choice"><input type="radio" name="choice" value="2" /><span id="c2"></span></label>
-                    <label class="choice"><input type="radio" name="choice" value="3" /><span id="c3"></span></label>
-                    <label class="choice"><input type="radio" name="choice" value="4" /><span id="c4"></span></label>
-                    <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next question</button>
-                </div>
-            </div>
-            <div id = "highScore"></div>
-        </div>
-    </main>
+        <aside>
+            <button id="startButton" class="start-btn">Start</button>
+        </aside>
+        <main class="title">
+            <h1>This is a timed quiz</h1>
+            <p>This will cover some of javascript conspects.</br>
+                If you get an answer wrong you will lose time.></br>
+                Getting questions right gives you points for high scores
+            </p>
+        </main>
     <script src="questions.js"></script>
     
     <script src="game.js"></script>
-    
 </body>
-
 </html>

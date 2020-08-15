@@ -47,6 +47,16 @@ body{
     color: #030303
 }
 
+.start-btn:hover{
+    background-color: rgba(96, 236, 159, 0.8);
+    color: #030303;
+}
+
+.start-btn{
+    font-size: 30px;
+    text-align: center;
+}
+
 
 
 .choice input:checked .choice{

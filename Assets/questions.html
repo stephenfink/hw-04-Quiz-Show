@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Show</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body class="body">
+    <header>
+        <h1 class="title">Welcome to Quiz Show</h1><button id="startButton" class="start-btn" onclick="setTime()">Start</button>
+    </div id="time" ><h1 id="time"></h1></div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div id="question" class="question"></div>
+                    <label class="choice"><input type="radio" name="choice" value="1" /><span id="c1"></span></label>
+                    <label class="choice"><input type="radio" name="choice" value="2" /><span id="c2"></span></label>
+                    <label class="choice"><input type="radio" name="choice" value="3" /><span id="c3"></span></label>
+                    <label class="choice"><input type="radio" name="choice" value="4" /><span id="c4"></span></label>
+                    <button id="nextButton" class="next-btn" onclick="loadNextQuestion();">Next question</button>
+                </div>
+            </div>
+            <div id = "highScore"></div>
+        </div>
+    </main>
+    <script src="questions.js"></script>
+    
+    <script src="game.js"></script>
+    
+</body>
+
+</html>

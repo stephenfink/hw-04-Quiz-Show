@@ -8,8 +8,8 @@ var opt1 = document.getElementById("c1");
 var opt2 = document.getElementById("c2");
 var opt3 = document.getElementById("c3");
 var opt4 = document.getElementById("c4");
-var start = document.getElementById("startButton")
-var time = document.getElementById("time")
+var start = document.getElementById("startButton");
+var time = document.getElementById("time");
 var nextButton = document.getElementById("nextButton");
 
  //this is the question rotation functions
