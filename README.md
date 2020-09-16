@@ -6,5 +6,5 @@ Time is lost base on wrong answers, and Time is the score in which the faster on
 
 Thank you for your time.
 
-
+github.io link https://stephenfink.github.io/hw-04-Quiz-Show/
 
